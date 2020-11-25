@@ -21,6 +21,7 @@ class PageList extends StatelessWidget {
         builder: (_) {
           final List<Team> teams = futureTeams.result;
           return ListView.builder(
+            shrinkWrap: true,
             itemCount: teams.length,
             itemBuilder: (context, index) {
               return ListTile(
@@ -36,8 +37,8 @@ class PageList extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      "ID",
-                      // teams[index].id,
+                      // "ID",
+                      teams[index].id.toString(),
                       style: TextStyle(color: Colors.grey, fontSize: 14),
                     ),
                   ],

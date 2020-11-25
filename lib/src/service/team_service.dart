@@ -7,8 +7,7 @@ class TeamService {
 
   Future<List<Team>> fetchTeams() async {
     try {
-      Response response = await _dio.get('v1/teams');
-
+      Response response = await _dio.get('/teams');
       return _decode(response);
     } on DioError catch (error) {
       throw error.response.statusCode;
@@ -18,11 +17,9 @@ class TeamService {
   List<Team> _decode(Response response) {
     if (response.statusCode == 200) {
       var decoded = response.data;
-
       List<Team> team = decoded.map<Team>((map) {
         return Team.fromJson(map);
       }).toList();
-
       return team;
     } else {
       throw Exception("Erro ao carregar times");
