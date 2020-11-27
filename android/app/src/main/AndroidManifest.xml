@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.nba_teams">
    <application
-        android:label="nba_teams"
+        android:label="NBA Teams"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

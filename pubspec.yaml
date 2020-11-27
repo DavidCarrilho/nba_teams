@@ -33,12 +33,19 @@ dependencies:
   mobx: ^1.2.1+4
   flutter_mobx: ^1.1.0+2
   get_it: ^5.0.1
+  grouped_list: ^3.7.1
 
 dev_dependencies:
   build_runner: ^1.10.6
   mobx_codegen: ^1.1.2
+  flutter_launcher_icons: ^0.8.1
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  image_path: "icon/icon.png" 
+  android: true
+  ios: true
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

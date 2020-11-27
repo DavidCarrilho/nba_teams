@@ -1,28 +1,28 @@
 class Team {
   int id;
-  String city;
+  String fullName;
 
   Team({
     this.id,
-    this.city,
+    this.fullName,
   });
 
   factory Team.fromJson(Map json) {
     return Team(
       id: json['id'],
-      city: json['city'],
+      fullName: json['full_name'],
     );
   }
 
   Map toJson() {
     return {
       "id": id,
-      "city": city,
+      "full_name": fullName,
     };
   }
 
   @override
   String toString() {
-    return '{id: $id, city: $city,}';
+    return '{id: $id, full_name: $fullName,}';
   }
 }
